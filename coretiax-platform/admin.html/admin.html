@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Coretiax Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Admin Coretiax</h1>
+    <form id="login-form">
+        <label>Mot de passe :</label>
+        <input type="password" id="password" required>
+        <button type="submit">Connexion</button>
+    </form>
+
+    <div id="admin-panel" style="display:none;">
+        <button id="add-project-btn">Ajouter un projet</button>
+
+        <div id="add-project-section" style="display:none;">
+            <input type="email" id="new-email" placeholder="Email client" required>
+            <input type="text" id="new-firstname" placeholder="Prénom" required>
+            <input type="text" id="new-lastname" placeholder="Nom" required>
+            <select id="new-offer">
+                <option value="basic">Basic Plan</option>
+                <option value="premium">Premium Branding</option>
+                <option value="eco">The Brand Ecosystem</option>
+            </select>
+            <textarea id="new-details" placeholder="Détails"></textarea>
+            <button id="create-project-btn">Créer le projet</button>
+        </div>
+
+        <h2>Liste des projets</h2>
+        <table id="projects-table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Offre</th>
+                    <th>Statut</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

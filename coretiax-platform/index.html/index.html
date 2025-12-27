@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Coretiax - Suivi de Commande</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="lang-btn">EN/FR</button>
+    </header>
+
+    <h1 id="title">Suivi de Commande</h1>
+
+    <form id="email-form">
+        <label id="email-label">Adresse email :</label>
+        <input type="email" id="email" required>
+        <button type="submit" id="submit-button">Voir le projet</button>
+    </form>
+
+    <div id="project-section" style="display:none;">
+        <h2>Statut du projet :</h2>
+        <p id="project-status"></p>
+        <div id="project-files"></div>
+        <button id="revise-btn">Demander une Révision (25$)</button>
+    </div>
+
+    <script src="js/supabase.js"></script>
+    <script src="js/client.js"></script>
+</body>
+</html>
